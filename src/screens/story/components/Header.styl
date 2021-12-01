@@ -1,0 +1,50 @@
+.host {
+  padding: 16px;
+  padding-bottom: 8px;
+  background-color: var(--content-bg);
+
+  border-bottom-color: var(--content-border);
+}
+
+.title {
+  font-family: 'System';
+  font-size: 17px;
+  color: var(--content-fg);
+
+  margin-bottom: 16px;
+}
+
+.summary {
+  color: var(--content-fg);
+}
+
+.actions {
+  flex-direction: row;
+  justify-content: space-between;
+
+  border-top-color: var(--content-border);
+
+  margin-top: 12px;
+  margin-bottom 4px;
+
+  padding-top: 12px;
+
+  &__item {
+    width: 32px;
+    height: 32px;
+
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+
+  tint-color: var(--tint-bg);
+
+  &__active {
+    tint-color: var(--secondary-color);
+  }
+}

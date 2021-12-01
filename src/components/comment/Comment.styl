@@ -1,0 +1,126 @@
+$gutter = 8px;
+$colors = #0D61AB, #E48203, #7AC528, #842A7C, #9A012D, #0D61AB, #E48203, #7AC528
+
+
+.flex {
+  flex: 1;
+}
+
+.host {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  background-color: var(--content-bg);
+
+  &__card {
+    margin-bottom: 8px;
+  }
+}
+
+.container {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+for color, i in $colors {
+  .level{i} {
+    margin-left: i * 16px;
+
+    border-left-width: 2px;
+    border-left-color: color;
+  }
+ }
+
+.level0 {
+  border-left-color: transparent;
+}
+
+.row {
+  flex-direction: row;
+
+  &__expanded {
+    margin-bottom 10px;
+  }
+}
+
+.author {
+  font-family: 'System';
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--content-fg);
+
+  flex: 1;
+
+  &__me {
+    color: var(--tint-bg);
+  }
+}
+
+.ago {
+  font-family: 'System';
+  font-size: 14px;
+  color: var(--content-fg);
+  opacity: 0.7;
+}
+
+
+.text {
+  font-family: 'System';
+  font-size: 15px;
+  color: var(--content-fg);
+  opacity: 0.825;
+}
+
+.border {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  width: 48px;
+}
+
+.icon {
+  &__more {
+    tint-color: var(--content-border);
+
+    margin-top: 2px;
+    margin-right: 8px;
+  }
+
+  &__expand {
+    tint-color: var(--content-fg);
+    opacity: 0.7;
+  }
+
+  &__arrow {
+    margin-top: 1px;
+    margin-left: 2px;
+    tint-color: var(--primary-color);
+  }
+}
+
+.parent {
+  background-color: var(--meta-bg);
+  border-radius: 4px;
+  padding: 16px;
+
+  // TODO: these text colors
+
+  &__text {
+    color: var(--meta-fg);
+    opacity: 0.825;
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    color: var(--meta-fg);
+    margin-bottom: 8px;
+    opacity: 0.825;
+  }
+
+  &__author {
+    font-weight: 500;
+    color: var(--meta-fg);
+    opacity: 0.825;
+  }
+}

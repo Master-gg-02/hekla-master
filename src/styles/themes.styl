@@ -1,0 +1,157 @@
+.default {
+  --hairline-width: 0.4px;
+
+  --primary-color: #007aff;
+  --primary-light-color: lighten(#007aff, 10%);
+  --primary-dark-color: darken(#007aff, 10%);
+  --primary-text-color: #ffffff;
+
+  --secondary-color: #ff6c00;
+  --secondary-light-color: lighten(#ff6c00, 10%);
+  --secondary-dark-color: darken(#ff6c00, 10%);
+  --secondary-text-color: #ffffff;
+}
+
+applyTheme() {
+  // Tint colors
+  --tint-bg: $statusBar-background;
+  --tint-fg: $editor-foreground;
+
+  --statusbar-bg: $editorIndentGuide-background;
+
+  // Navbar background color
+  --navbar-bg: $editor-background;
+  // Navbar text color
+  --navbar-fg: $editor-foreground;
+  // Navbar button colors
+  --navbar-tint: $statusBar-background;
+
+  // Tabbar background color
+  --tabbar-bg: $editor-background;
+  // Tabbar inactive text and icon color
+  --tabbar-fg: $editor-foreground;
+  // Tabbar active text and icon color
+  --tabbar-tint: $statusBar-background;
+
+  // Screen backdrop
+  --backdrop: $editorGutter-background;
+
+  // Content background color
+  --content-bg: $editor-background;
+  // Content underlay color (active / press)
+  --content-bg-highlight: $editorGutter-background;
+  // Content text color
+  --content-fg: $editor-foreground;
+
+  // Content border color
+  --content-border: $editorIndentGuide-background;
+
+  // Metalink background color
+  --meta-bg: $sideBar-background;
+  // Metalink underlay color (press)
+  --meta-bg-highlight: $sideBarSectionHeader-background;
+  // Metalink text color
+  --meta-fg: $sideBar-foreground;
+  // Metalink border color
+  --meta-border: $sideBarSectionHeader-background;
+
+  // Text link color
+  --text-link-fg: $statusBar-background;
+  // Quote left border color
+  --text-quote-border: $editorIndentGuide-background;
+  // Blockquote background color
+  --text-code-bg: $sideBar-background;
+  // Blockquote text color
+  --text-code-fg: $sideBar-foreground;
+}
+
+.light {
+  $editor-background = #ffffff;
+  $editor-foreground = #000000;
+  $editorIndentGuide-background = #e3e3e3;
+  $statusBar-background = #007aff;
+  $sideBar-background = #f2f1f6;
+  $sideBar-foreground = #111111;
+  $sideBarSectionHeader-background = #e6e5ea;
+  $editorGutter-background = #f2f1f6;
+
+  applyTheme();
+  --content-fg-50: rgba($editor-foreground, 50%);
+  --statusbar-bg: darken($statusBar-background, 50%);
+  --navbar-bg: transparent;
+  --tabbar-bg: transparent;
+  --tabbar-fg: #A1A1A1;
+  --tint-fg: white;
+}
+
+.dark {
+  $editor-background = #222222;
+  $editor-foreground = #ffffff;
+  $editorIndentGuide-background = #444444;
+  $statusBar-background = #ff2d55;
+  $sideBar-background = #373737;
+  $sideBar-foreground = #ffffff;
+  $sideBarSectionHeader-background = #393939;
+  $editorGutter-background = #191919;
+
+  applyTheme();
+  --content-fg-50: rgba($editor-foreground, 50%);
+  --statusbar-bg: darken($statusBar-background, 50%);
+  --navbar-style: dark;
+  --navbar-bg: transparent;
+  --tabbar-style: dark;
+  --tabbar-bg: transparent;
+  --tabbar-fg: #A1A1A1;
+}
+
+.piggy {
+  $editor-background = #3d2f34;
+  $editor-foreground = #edebe6;
+  $editorIndentGuide-background = #5a454d;
+  $statusBar-background = #f52e62;
+  $sideBar-background = #4b3a40;
+  $sideBar-foreground = #edebe6;
+  $sideBarSectionHeader-background = #544148;
+  $editorGutter-background = #372b2f;
+
+  applyTheme();
+  --content-fg-50: rgba($editor-foreground, 50%);
+  --statusbar-bg: darken($statusBar-background, 33%);
+  --tabbar-bg: darken($editor-background, 50%)
+  --tabbar-fg: $sideBar-foreground;
+  --tabbar-tint: $statusBar-background;
+}
+
+.piggyLight {
+  $editor-background = #ffffff;
+  $editor-foreground = #222222;
+  $editorIndentGuide-background = #e3e3e3;
+  $statusBar-background = #f52e62;
+  $sideBar-background = #f2f2f2;
+  $sideBar-foreground = #444444;
+  $sideBarSectionHeader-background = #d9d9d9;
+  $editorGutter-background = #fafafa;
+
+  applyTheme();
+  --content-fg-50: rgba($editor-foreground, 50%);
+  --tint-fg: #ffffff;
+  --tabbar-fg: #A1A1A1;
+  --statusbar-bg: darken($statusBar-background, 25%);
+}
+
+.glowfish {
+  $editor-background = #191f13;
+  $editor-foreground = #6ea240;
+  $editorIndentGuide-background = #323f26;
+  $statusBar-background = #95cc5e;
+  $sideBar-background = #262f1d;
+  $sideBar-foreground = #6ea240;
+  $sideBarSectionHeader-background = #2d3822;
+  $editorGutter-background = #14190f;
+
+  applyTheme();
+  --content-fg-50: rgba($editor-foreground, 50%);
+  --tint-fg: white;
+  --statusbar-bg: darken($statusBar-background, 25%);
+  --tabbar-bg: darken($sideBar-background, 33%);
+}

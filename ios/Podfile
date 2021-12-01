@@ -1,0 +1,45 @@
+platform :ios, '9.0'
+
+# Build 4
+
+target 'Hekla' do
+
+  pod 'Firebase/Core', '~> 5.3.0'
+  pod 'Firebase/Database', '~> 5.3.0'
+  pod 'Firebase/Firestore', '~> 5.3.0'
+
+  pod 'CodePush', :path => '../node_modules/react-native-code-push'
+  pod 'Interactable', :path => '../node_modules/react-native-interactable'
+
+  pod 'RNIap', :path => '../node_modules/react-native-iap'
+  pod 'RNRate', :path => '../node_modules/react-native-rate/ios'
+  pod 'RNFirebase', :path => '../node_modules/react-native-firebase/ios/RNFirebase.podspec'
+  pod 'RNKeychain', :path => '../node_modules/react-native-keychain'
+  pod 'RNReactNativeHapticFeedback', :path => '../node_modules/react-native-haptic-feedback'
+  pod 'ReactNativeNavigation', :path => '../node_modules/react-native-navigation'
+  pod 'SentryReactNative', :path => '../node_modules/react-native-sentry'
+
+  pod 'react-native-config', :path => '../node_modules/react-native-config'
+  pod 'react-native-cookies', :path => '../node_modules/react-native-cookies/ios'
+  pod 'react-native-fast-image', :path => '../node_modules/react-native-fast-image'
+  pod 'react-native-custom-tabs', :path => '../node_modules/react-native-custom-tabs/ios'
+  pod 'react-native-version-number', :path => '../node_modules/react-native-version-number'
+
+  pod 'yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
+  pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
+  pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
+  pod 'React', :path => '../node_modules/react-native', :subspecs => [
+    'Core',
+    'CxxBridge',
+    'ART',
+    'RCTActionSheet',
+    'RCTText',
+    'RCTNetwork',
+    'RCTWebSocket',
+    'RCTAnimation',
+    'RCTImage',
+    'RCTLinkingIOS',
+    'RCTPushNotification',
+    'DevSupport',
+  ]
+end
